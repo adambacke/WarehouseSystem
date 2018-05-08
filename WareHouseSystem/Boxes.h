@@ -16,6 +16,4 @@ private:
 	int counter;
 	Box** boxes;
 	void Expand();
-
-	//Test
 };

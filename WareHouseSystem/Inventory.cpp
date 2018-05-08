@@ -51,6 +51,7 @@ bool Inventory::reduceQty(int ID, int Qty)
 		if (goods[i]->getidNumber() == ID)
 		{
 			retVal = goods[i]->removeQty(Qty);
+			i = nrOfStoredItems;
 		}
 	}
 	return retVal;
@@ -70,7 +71,7 @@ void Inventory::addNewGoods(int ID, int weight, std::string productName, std::st
 
 }
 
-bool Inventory::EditProduct(int ID)
+bool Inventory::EditProduct(int ID, Boxes boxes)
 {
 	int userChoise = -1;
 	while (userChoise != 0)
@@ -83,16 +84,68 @@ bool Inventory::EditProduct(int ID)
 		std::cout << "0. End edit session" << std::endl;
 		std::cin >> userChoise;
 		std::cin.ignore();
+		std::string newName = " ";
+		std::string newStorageCondition = " ";
 
 		switch (userChoise)
 		{
 		case 1:
-		{
-			std::string newName;
 			std::cout << "Write new name: ";
 			std::getline(std::cin, newName);
+			for (int i = 0; i < nrOfStoredItems; i++)
+			{
+				if (goods[i]->getidNumber() == ID)
+				{
+					goods[i]->setName(newName);
+					i = nrOfStoredItems;
+				}
+			}
+			break;
 
-		}
+		case 2:
+			int newWeight;
+			std::cout << "Write new weight: ";
+			std::cin >> newWeight;
+			std::cin.ignore();
+			for (int i = 0; i < nrOfStoredItems; i++)
+			{
+				if (goods[i]->getidNumber() == ID)
+				{
+					goods[i]->setWeight(newWeight);
+					i = nrOfStoredItems;
+				}
+			}
+			break;
+
+		case 3:
+			int newBoxType;
+			std::cout << "Write new box type ID: ";
+			std::cin >> newBoxType;
+			std::cin.ignore();
+			for (int i = 0; i < nrOfStoredItems; i++)
+			{
+				if (goods[i]->getidNumber() == ID)
+				{
+					goods[i]->setBoxSize(newBoxType, boxes);
+					i = nrOfStoredItems;
+				}
+			}
+			break;
+
+		case 4:
+			std::cout << "Write new box type ID: ";
+			std::cin >> newBoxType;
+			std::cin.ignore();
+			for (int i = 0; i < nrOfStoredItems; i++)
+			{
+				if (goods[i]->getidNumber() == ID)
+				{
+					goods[i]->setBoxSize(newBoxType, boxes);
+					i = nrOfStoredItems;
+				}
+			}
+			break;
+		
 
 		default:
 			break;
