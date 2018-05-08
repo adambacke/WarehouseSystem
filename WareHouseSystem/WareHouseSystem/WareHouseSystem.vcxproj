@@ -124,6 +124,9 @@
     <ClInclude Include="OrderLine.h" />
     <ClInclude Include="Truck.h" />
     <ClInclude Include="Trucks.h" />
+    <ClInclude Include="WareHouse.h" />
+    <ClInclude Include="Warehouses.h" />
+    <ClInclude Include="WarehouseSpot.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Box.cpp" />
@@ -135,6 +138,9 @@
     <ClCompile Include="..\WorkActivity.cpp" />
     <ClCompile Include="Truck.cpp" />
     <ClCompile Include="Trucks.cpp" />
+    <ClCompile Include="WareHouse.cpp" />
+    <ClCompile Include="Warehouses.cpp" />
+    <ClCompile Include="WarehouseSpot.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
