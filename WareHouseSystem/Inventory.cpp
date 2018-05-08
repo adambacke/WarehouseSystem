@@ -133,21 +133,24 @@ bool Inventory::EditProduct(int ID, Boxes boxes)
 			break;
 
 		case 4:
-			std::cout << "Write new box type ID: ";
-			std::cin >> newBoxType;
-			std::cin.ignore();
+			std::cout << "Write new storage condition: ";
+			std::getline(std::cin, newStorageCondition);
 			for (int i = 0; i < nrOfStoredItems; i++)
 			{
 				if (goods[i]->getidNumber() == ID)
 				{
-					goods[i]->setBoxSize(newBoxType, boxes);
+					goods[i]->setStorageConditon(newStorageCondition);
 					i = nrOfStoredItems;
 				}
 			}
 			break;
-		
+
+		case 0:
+			std::cout << "Closing" << std::endl;
+			break;
 
 		default:
+			std::cout << "Wrong choise try again" << std::endl;
 			break;
 		}
 	}

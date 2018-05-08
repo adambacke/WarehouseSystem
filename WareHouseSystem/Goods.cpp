@@ -70,6 +70,11 @@ bool Goods::setBoxSize(int typeBox, Boxes boxes)
 	return retVal;
 }
 
+void Goods::setStorageConditon(std::string storageCondition)
+{
+	this->storageCondition = storageCondition;
+}
+
 int Goods::getidNumber() const
 {
 	return this->idNumber;
