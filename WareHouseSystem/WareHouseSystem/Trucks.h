@@ -16,5 +16,6 @@ public:
 	Trucks();
 	~Trucks();
 
+	//ska slutföras 
 	bool Work()
 };

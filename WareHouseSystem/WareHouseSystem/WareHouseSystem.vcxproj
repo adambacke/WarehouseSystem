@@ -121,6 +121,7 @@
     <ClInclude Include="..\Inventory.h" />
     <ClInclude Include="..\WorkActivities.h" />
     <ClInclude Include="..\WorkActivity.h" />
+    <ClInclude Include="OrderLine.h" />
     <ClInclude Include="Truck.h" />
     <ClInclude Include="Trucks.h" />
   </ItemGroup>
