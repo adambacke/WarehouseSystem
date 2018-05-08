@@ -115,6 +115,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Box.h" />
+    <ClInclude Include="..\Boxes.h" />
+    <ClInclude Include="..\Goods.h" />
+    <ClInclude Include="..\Inventory.h" />
+    <ClInclude Include="..\WorkActivities.h" />
+    <ClInclude Include="..\WorkActivity.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Box.cpp" />
+    <ClCompile Include="..\Boxes.cpp" />
+    <ClCompile Include="..\Goods.cpp" />
+    <ClCompile Include="..\Inventory.cpp" />
+    <ClCompile Include="..\testWorkActivity.cpp" />
+    <ClCompile Include="..\WorkActivities.cpp" />
+    <ClCompile Include="..\WorkActivity.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
