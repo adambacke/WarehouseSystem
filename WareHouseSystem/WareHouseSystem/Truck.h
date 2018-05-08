@@ -2,6 +2,7 @@
 
 
 
+
 class Truck
 {
 private:
