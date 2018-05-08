@@ -17,8 +17,6 @@ int main()
 
 	std::cin.get();
 
-	//test
-	//test 2
 
 	return 0;
 }
